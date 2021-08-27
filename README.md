@@ -5,7 +5,9 @@
 ### Установка
 
 ```sh
-docker build https://github.com/Mikelarg/voter.git
+git clone https://github.com/Mikelarg/voter.git voter
+cd voter
+docker-compose build
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 docker-compose up
