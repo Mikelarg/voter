@@ -7,7 +7,7 @@
 ```sh
 git clone https://github.com/Mikelarg/voter.git voter
 cd voter
-docker build
+docker-compose build
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 docker-compose up
