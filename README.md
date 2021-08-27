@@ -7,10 +7,9 @@
 ```sh
 git clone https://github.com/Mikelarg/voter.git voter
 cd voter
-docker-compose build
-docker-compose run web python manage.py migrate
-docker-compose run web python manage.py createsuperuser
-docker-compose up
+docker-compose up -d --build
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
 ```
 
 И направляйтесь сюда http://127.0.0.1:8000/api/
